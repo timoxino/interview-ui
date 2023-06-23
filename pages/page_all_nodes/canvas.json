@@ -529,7 +529,8 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "mobileBottomRow": 22,
-                      "widgetName": "Button2",
+                      "widgetName": "button_create",
+                      "onClick": "{{node_to_parent.run({});\nremoveValue('parentId');\nremoveValue('parentName');}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "Button",
                       "iconSVG": "https://appcdn.appsmith.com/static/media/icon.7beb9123fb53027d9d6b778cdfe4caed.svg",
@@ -543,6 +544,11 @@
                       "hideCard": false,
                       "mobileRightColumn": 63,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 53,
                       "dynamicBindingPathList": [
                         {
@@ -552,7 +558,7 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "text": "Confirm",
+                      "text": "Create",
                       "isDisabled": false,
                       "key": "p775sxhcyc",
                       "isDeprecated": false,
