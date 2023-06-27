@@ -27,7 +27,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{\n    \"name\": {{input_child_name}},\n    \"description\": {{input_child_description}},\n    \"parent\": {\"id\": {{Number(label_parent_id_value)}}}\n}",
+      "body": "{\n\t\"name\": {{this.params.name}},\n\t\"description\": {{this.params.description}},\n\t\"parent\": {\n\t\"id\": {{this.params.parentId}}\n}\n}",
       "bodyFormData": [],
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
@@ -50,9 +50,9 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Number(label_parent_id_value)",
-      "input_child_description",
-      "input_child_name"
+      "this.params.description",
+      "this.params.name",
+      "this.params.parentId"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

@@ -1,5 +1,7 @@
 {
-    "name": {{input_child_name}},
-    "description": {{input_child_description}},
-    "parent": {"id": {{Number(label_parent_id_value)}}}
+	"name": {{this.params.name}},
+	"description": {{this.params.description}},
+	"parent": {
+	"id": {{this.params.parentId}}
+}
 }
