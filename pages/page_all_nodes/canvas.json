@@ -1494,6 +1494,7 @@
                       "boxShadow": "none",
                       "mobileBottomRow": 22,
                       "widgetName": "Button3",
+                      "onClick": "{{update_node.run({\n  // \"key\": \"value\",\n  \"id\": table_all_nodes.selectedRow.id,\n  \"name\": input_edit_name.text,\n  \"description\": input_edit_description.text\n}).then(() => {\n  closeModal('modal_edit');\n}).catch(() => {\n  showAlert('Update failed', 'error');\n  // \"key\": \"value\",\n});}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "Button",
                       "iconSVG": "https://appcdn.appsmith.com/static/media/icon.7beb9123fb53027d9d6b778cdfe4caed.svg",
@@ -1507,7 +1508,11 @@
                       "hideCard": false,
                       "mobileRightColumn": 63,
                       "animateLoading": true,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 56,
                       "dynamicBindingPathList": [
                         {
