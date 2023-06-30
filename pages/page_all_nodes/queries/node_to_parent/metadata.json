@@ -27,7 +27,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{\n\t\"name\": {{this.params.name}},\n\t\"description\": {{this.params.description}},\n\t\"parent\": {\n\t\"id\": {{this.params.parentId}}\n}\n}",
+      "body": "{\n\t\"name\": {{this.params.name}},\n\t\"description\": {{this.params.description}},\n\t\"parent\": {\n\t\"uuid\": {{this.params.parentId}}\n}\n}",
       "bodyFormData": [],
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],

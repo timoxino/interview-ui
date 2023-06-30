@@ -27,7 +27,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{\n\t\"id\": {{this.params.id}},\n\t\"name\": {{this.params.name}},\n\t\"description\": {{this.params.description}}\n}",
+      "body": "{\n\t\"uuid\": {{this.params.id}},\n\t\"name\": {{this.params.name}},\n\t\"description\": {{this.params.description}}\n}",
       "bodyFormData": [],
       "httpMethod": "PATCH",
       "selfReferencingDataPaths": [],

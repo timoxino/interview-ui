@@ -2,6 +2,6 @@
 	"name": {{this.params.name}},
 	"description": {{this.params.description}},
 	"parent": {
-	"id": {{this.params.parentId}}
+	"uuid": {{this.params.parentId}}
 }
 }

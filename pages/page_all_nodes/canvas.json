@@ -50,9 +50,6 @@
                   "key": "boxShadow"
                 },
                 {
-                  "key": "primaryColumns.id.computedValue"
-                },
-                {
                   "key": "primaryColumns.name.computedValue"
                 },
                 {
@@ -60,6 +57,9 @@
                 },
                 {
                   "key": "primaryColumns.parent.computedValue"
+                },
+                {
+                  "key": "primaryColumns.uuid.computedValue"
                 }
               ],
               "needsHeightForContent": true,
@@ -98,7 +98,7 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "columnUpdatedAt": 1687835841472,
+              "columnUpdatedAt": 1688138383689,
               "primaryColumnId": "id",
               "defaultSelectedRowIndices": [
                 0
@@ -107,7 +107,7 @@
               "widgetName": "table_all_nodes",
               "defaultPageSize": 0,
               "columnOrder": [
-                "id",
+                "uuid",
                 "name",
                 "description",
                 "parent"
@@ -119,43 +119,15 @@
               ],
               "displayName": "Table",
               "bottomRow": 48,
-              "columnWidthMap": {},
+              "columnWidthMap": {
+                "uuid": 143
+              },
               "parentRowSpace": 10,
               "hideCard": false,
               "mobileRightColumn": 34,
               "dynamicTriggerPathList": [],
               "borderWidth": "1",
               "primaryColumns": {
-                "id": {
-                  "allowCellWrapping": false,
-                  "allowSameOptionsInNewRow": true,
-                  "index": 0,
-                  "width": 150,
-                  "originalId": "id",
-                  "id": "id",
-                  "alias": "id",
-                  "horizontalAlignment": "RIGHT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "number",
-                  "textColor": "",
-                  "textSize": "0.875rem",
-                  "fontStyle": "",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellEditable": false,
-                  "isEditable": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "id",
-                  "isSaveVisible": true,
-                  "isDiscardVisible": true,
-                  "computedValue": "{{table_all_nodes.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
-                  "sticky": "",
-                  "validation": {},
-                  "cellBackground": ""
-                },
                 "name": {
                   "allowCellWrapping": false,
                   "allowSameOptionsInNewRow": true,
@@ -206,7 +178,7 @@
                   "isDisabled": false,
                   "isCellEditable": false,
                   "isEditable": false,
-                  "isCellVisible": false,
+                  "isCellVisible": true,
                   "isDerived": false,
                   "label": "description",
                   "isSaveVisible": true,
@@ -232,7 +204,7 @@
                   "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
-                  "isVisible": true,
+                  "isVisible": false,
                   "isDisabled": false,
                   "isCellEditable": false,
                   "isEditable": false,
@@ -242,6 +214,36 @@
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{table_all_nodes.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"parent\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "uuid": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 0,
+                  "width": 150,
+                  "originalId": "uuid",
+                  "id": "uuid",
+                  "alias": "uuid",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "uuid",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{table_all_nodes.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"uuid\"]))}}",
                   "sticky": "",
                   "validation": {},
                   "cellBackground": ""
@@ -698,7 +700,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "{{table_all_nodes.selectedRow.id}}",
+                      "text": "{{table_all_nodes.selectedRow.uuid}}",
                       "key": "e0c9vc6kqj",
                       "isDeprecated": false,
                       "rightColumn": 63,
@@ -1171,7 +1173,7 @@
               "boxShadow": "none",
               "mobileBottomRow": 52,
               "widgetName": "button_delete",
-              "onClick": "{{node_by_id.run({\n //\"key\": \"value\",\n\t\"nodeId\": table_all_nodes.selectedRow.id\n});}}",
+              "onClick": "{{node_by_id.run({\n  // \"key\": \"value\",\n  \"nodeId\": table_all_nodes.selectedRow.uuid\n});}}",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
               "displayName": "Button",
               "iconSVG": "https://appcdn.appsmith.com/static/media/icon.7beb9123fb53027d9d6b778cdfe4caed.svg",
@@ -1494,7 +1496,7 @@
                       "boxShadow": "none",
                       "mobileBottomRow": 22,
                       "widgetName": "Button3",
-                      "onClick": "{{update_node.run({\n  // \"key\": \"value\",\n  \"id\": table_all_nodes.selectedRow.id,\n  \"name\": input_edit_name.text,\n  \"description\": input_edit_description.text\n}).then(() => {\n  closeModal('modal_edit');\n}).catch(() => {\n  showAlert('Update failed', 'error');\n  // \"key\": \"value\",\n});}}",
+                      "onClick": "{{update_node.run({\n  // \"key\": \"value\",\n  \"id\": table_all_nodes.selectedRow.uuid,\n  \"name\": input_edit_name.text,\n  \"description\": input_edit_description.text\n}).then(() => {\n  closeModal('modal_edit');\n}).catch(() => {\n  showAlert('Update failed', 'error');\n  // \"key\": \"value\",\n});}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "Button",
                       "iconSVG": "https://appcdn.appsmith.com/static/media/icon.7beb9123fb53027d9d6b778cdfe4caed.svg",
