@@ -301,7 +301,7 @@
               "isVisibleSearch": true,
               "responsiveBehavior": "fill",
               "mobileLeftColumn": 0,
-              "isVisiblePagination": false,
+              "isVisiblePagination": true,
               "verticalAlignment": "CENTER"
             },
             {
@@ -1926,7 +1926,7 @@
                         }
                       ],
                       "labelPosition": "Top",
-                      "inputType": "html",
+                      "inputType": "markdown",
                       "isDisabled": false,
                       "key": "b0ir0w8d0l",
                       "isRequired": false,
