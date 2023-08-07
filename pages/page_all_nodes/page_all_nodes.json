@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 82,
+          "version": 83,
           "minHeight": 1292,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
@@ -50,6 +50,28 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "page_all_nodes_get_category_by_question",
+              "name": "get_category_by_question",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "this.params.questionUuid"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "page_all_nodes_get_complexity_by_question",
+              "name": "get_complexity_by_question",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "this.params.questionUuid"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]

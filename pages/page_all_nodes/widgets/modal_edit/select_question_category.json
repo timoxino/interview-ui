@@ -7,7 +7,7 @@
     "type": "SELECT_WIDGET",
     "serverSideFiltering": false,
     "topRowBeforeCollapse": 9,
-    "defaultOptionValue": "",
+    "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( get_category_by_question.data.map((category) => {\n  return {\n    label: category.name,\n    value: category.uuid\n    };\n  }).pop()))(select_question_category.options, select_question_category.serverSideFiltering) }}",
     "animateLoading": true,
     "leftColumn": 9,
     "dynamicBindingPathList": [
@@ -15,7 +15,8 @@
         {"key": "borderRadius"},
         {"key": "sourceData"},
         {"key": "isVisible"},
-        {"key": "isRequired"}
+        {"key": "isRequired"},
+        {"key": "defaultOptionValue"}
     ],
     "placeholderText": "Select option",
     "isDisabled": false,

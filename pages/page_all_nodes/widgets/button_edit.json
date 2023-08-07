@@ -3,7 +3,7 @@
     "boxShadow": "none",
     "mobileBottomRow": 52,
     "widgetName": "button_edit",
-    "onClick": "{{showModal('modal_edit');}}",
+    "onClick": "{{showModal('modal_edit');\nget_category_by_question.run({\n  // \"key\": \"value\",\n  \"questionUuid\": table_all_nodes.selectedRow.uuid\n});\nget_complexity_by_question.run({\n //\"key\": \"value\",\n\t\"questionUuid\": table_all_nodes.selectedRow.uuid\n});}}",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "displayName": "Button",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.7beb9123fb53027d9d6b778cdfe4caed.svg",

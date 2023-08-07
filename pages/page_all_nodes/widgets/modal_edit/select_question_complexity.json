@@ -7,7 +7,7 @@
     "type": "SELECT_WIDGET",
     "serverSideFiltering": false,
     "topRowBeforeCollapse": 9,
-    "defaultOptionValue": "",
+    "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( get_complexity_by_question.data.map((complexity) => {\n  return {\n    label: complexity.description,\n    value: complexity.uuid\n    };\n  }).pop()))(select_question_complexity.options, select_question_complexity.serverSideFiltering) }}",
     "animateLoading": true,
     "leftColumn": 41,
     "dynamicBindingPathList": [
@@ -15,7 +15,8 @@
         {"key": "borderRadius"},
         {"key": "sourceData"},
         {"key": "isRequired"},
-        {"key": "isVisible"}
+        {"key": "isVisible"},
+        {"key": "defaultOptionValue"}
     ],
     "placeholderText": "Select option",
     "isDisabled": false,

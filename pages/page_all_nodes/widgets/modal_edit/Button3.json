@@ -3,8 +3,9 @@
     "boxShadow": "none",
     "mobileBottomRow": 22,
     "widgetName": "Button3",
-    "onClick": "{{update_node.run({\n  // \"key\": \"value\",\n  \"id\": table_all_nodes.selectedRow.uuid,\n  \"name\": input_edit_name.text,\n  \"description\": input_edit_description.text,\n  \"type\": select_type.selectedOptionValue\n}).then(() => {\n  closeModal('modal_edit');\n}).catch(() => {\n  showAlert('Update failed', 'error');\n  // \"key\": \"value\",\n});}}",
+    "onClick": "{{\n(function(){\tif(select_type.selectedOptionValue===\"QUESTION\"){\n\t\tupdate_question.run({\n\t\t\t\t\"id\": table_all_nodes.selectedRow.uuid,\n\t\t\t\"name\": input_edit_name.text,\n\t\t\t\"description\": input_edit_description.text,\n\t\t\t\"type\": select_type.selectedOptionValue,\n\t\t\t\"categoryUuid\": select_question_category.selectedOptionValue,\n\t\t\t\"complexityUuid\": select_question_complexity.selectedOptionValue\n\t\t\t}).then(() => {\n\t\tcloseModal('modal_edit');\n\t\t}).catch(() => {\n\t\t\tshowAlert('Update failed', 'error');\n\t\t});\n\t} else {\n\t\tupdate_node.run({\n\t\t\t\"id\": table_all_nodes.selectedRow.uuid,\n\t\t\t\"name\": input_edit_name.text,\n\t\t\t\"description\": input_edit_description.text,\n\t\t\t\"type\": select_type.selectedOptionValue\n\t\t}).then(() => {\n\t\t\tcloseModal('modal_edit');\n\t\t}).catch(() => {\n\t\t\tshowAlert('Update failed', 'error');\n\t\t\t// \"key\": \"value\",\n\t\t});\n\t}\n}\n)()\n}}",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+    "dynamicPropertyPathList": [{"key": "onClick"}],
     "displayName": "Button",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.7beb9123fb53027d9d6b778cdfe4caed.svg",
     "searchTags": [
