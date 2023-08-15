@@ -8,7 +8,7 @@
     "serverSideFiltering": false,
     "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( table_all_nodes.selectedRow.type))(select_type.options, select_type.serverSideFiltering) }}",
     "animateLoading": true,
-    "leftColumn": 51,
+    "leftColumn": 46,
     "dynamicBindingPathList": [
         {"key": "accentColor"},
         {"key": "borderRadius"},

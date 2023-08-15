@@ -6,19 +6,25 @@
     "labelWidth": 5,
     "type": "SELECT_WIDGET",
     "serverSideFiltering": false,
-    "defaultOptionValue": "GREEN",
+    "topRowBeforeCollapse": 12,
+    "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( get_category_by_question.data.map((category) => {\n  return {\n    label: category.name,\n    value: category.uuid\n    };\n  }).pop()))(select_question_category_add.options, select_question_category_add.serverSideFiltering) }}",
     "animateLoading": true,
     "leftColumn": 10,
     "dynamicBindingPathList": [
         {"key": "accentColor"},
-        {"key": "borderRadius"}
+        {"key": "borderRadius"},
+        {"key": "isRequired"},
+        {"key": "isVisible"},
+        {"key": "sourceData"},
+        {"key": "defaultOptionValue"}
     ],
     "placeholderText": "Select option",
     "isDisabled": false,
-    "isRequired": false,
+    "isRequired": "{{select_type_add.selectedOptionValue==\"QUESTION\"}}",
     "dynamicHeight": "FIXED",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "isVisible": true,
+    "bottomRowBeforeCollapse": 16,
+    "isVisible": "{{select_type_add.selectedOptionValue==\"QUESTION\"}}",
     "version": 1,
     "tags": [
         "Suggested",
@@ -26,9 +32,15 @@
     ],
     "isLoading": false,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "originalBottomRow": 16,
     "mobileBottomRow": 19,
     "widgetName": "select_question_category_add",
     "isFilterable": true,
+    "dynamicPropertyPathList": [
+        {"key": "optionValue"},
+        {"key": "isRequired"},
+        {"key": "isVisible"}
+    ],
     "displayName": "Select",
     "searchTags": ["dropdown"],
     "bottomRow": 16,
@@ -38,26 +50,13 @@
     "parentColumnSpace": 11.21875,
     "dynamicTriggerPathList": [],
     "labelPosition": "Top",
-    "sourceData": [
-        {
-            "code": "BLUE",
-            "name": "Blue"
-        },
-        {
-            "code": "GREEN",
-            "name": "Green"
-        },
-        {
-            "code": "RED",
-            "name": "Red"
-        }
-    ],
+    "sourceData": "{{get_question_category.data}}",
     "key": "89weob8tk7",
     "labelTextSize": "0.875rem",
     "isDeprecated": false,
     "rightColumn": 30,
     "widgetId": "98gney3jgx",
-    "optionValue": "code",
+    "optionValue": "uuid",
     "minWidth": 450,
     "parentId": "ox8nj0cekn",
     "labelAlignment": "left",
@@ -65,6 +64,7 @@
     "mobileTopRow": 12,
     "optionLabel": "name",
     "responsiveBehavior": "fill",
+    "originalTopRow": 12,
     "mobileLeftColumn": 10,
     "maxDynamicHeight": 9000,
     "minDynamicHeight": 4

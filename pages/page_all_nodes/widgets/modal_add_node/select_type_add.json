@@ -6,13 +6,12 @@
     "labelWidth": 5,
     "type": "SELECT_WIDGET",
     "serverSideFiltering": false,
-    "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( `QUESTION`))(select_type_add.options, select_type_add.serverSideFiltering) }}",
+    "defaultOptionValue": "",
     "animateLoading": true,
-    "leftColumn": 50,
+    "leftColumn": 47,
     "dynamicBindingPathList": [
         {"key": "accentColor"},
-        {"key": "borderRadius"},
-        {"key": "defaultOptionValue"}
+        {"key": "borderRadius"}
     ],
     "placeholderText": "Select option",
     "isDisabled": false,

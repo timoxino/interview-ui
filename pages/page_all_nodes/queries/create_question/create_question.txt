@@ -1,0 +1,12 @@
+{
+	"dataNode": {
+		"name": {{this.params.name}},
+		"description": {{this.params.description}},
+		"type": {{this.params.type}},
+		"parent": {
+		"uuid": {{this.params.parentUuid}},
+	}
+},
+"categoryUuid": {{this.params.categoryUuid}},
+"complexityUuid": {{this.params.complexityUuid}}
+}

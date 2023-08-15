@@ -10,7 +10,7 @@
         "rte"
     ],
     "topRow": 17,
-    "bottomRow": 48,
+    "bottomRow": 47,
     "parentRowSpace": 10,
     "labelWidth": 5,
     "type": "RICH_TEXT_EDITOR_WIDGET",
@@ -43,11 +43,11 @@
     "isLoading": false,
     "mobileTopRow": 23,
     "responsiveBehavior": "fill",
-    "originalTopRow": 18,
+    "originalTopRow": 17,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 9,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 49,
+    "originalBottomRow": 47,
     "defaultText": "",
     "minDynamicHeight": 4
 }
