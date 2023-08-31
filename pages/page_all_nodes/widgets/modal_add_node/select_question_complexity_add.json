@@ -38,7 +38,8 @@
     "isFilterable": true,
     "dynamicPropertyPathList": [
         {"key": "isRequired"},
-        {"key": "isVisible"}
+        {"key": "isVisible"},
+        {"key": "sourceData"}
     ],
     "displayName": "Select",
     "searchTags": ["dropdown"],
