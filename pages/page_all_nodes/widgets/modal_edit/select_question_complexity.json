@@ -1,72 +1,94 @@
 {
-    "boxShadow": "none",
-    "iconSVG": "https://appcdn.appsmith.com/static/media/icon.a7b19dc8b31d68fcff57f1d2c0084a18.svg",
-    "labelText": "",
-    "topRow": 9,
-    "labelWidth": 5,
-    "type": "SELECT_WIDGET",
-    "serverSideFiltering": false,
-    "topRowBeforeCollapse": 9,
-    "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( get_complexity_by_question.data.map((complexity) => {\n  return {\n    label: complexity.description,\n    value: complexity.uuid\n    };\n  }).pop()))(select_question_complexity.options, select_question_complexity.serverSideFiltering) }}",
-    "animateLoading": true,
-    "leftColumn": 41,
-    "dynamicBindingPathList": [
-        {"key": "accentColor"},
-        {"key": "borderRadius"},
-        {"key": "sourceData"},
-        {"key": "isRequired"},
-        {"key": "isVisible"},
-        {"key": "defaultOptionValue"}
-    ],
-    "placeholderText": "Select option",
-    "isDisabled": false,
-    "isRequired": "{{select_type.selectedOptionValue==\"QUESTION\"}}",
-    "dynamicHeight": "FIXED",
-    "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "bottomRowBeforeCollapse": 13,
-    "isVisible": "{{select_type.selectedOptionValue==\"QUESTION\"}}",
-    "version": 1,
-    "tags": [
-        "Suggested",
-        "Select"
-    ],
-    "isLoading": false,
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "originalBottomRow": 13,
-    "mobileBottomRow": 16,
-    "widgetName": "select_question_complexity",
-    "isFilterable": true,
-    "dynamicPropertyPathList": [
-        {"key": "optionValue"},
-        {"key": "isRequired"},
-        {"key": "isVisible"},
-        {"key": "sourceData"}
-    ],
-    "displayName": "Select",
-    "searchTags": ["dropdown"],
-    "bottomRow": 13,
-    "parentRowSpace": 10,
-    "hideCard": false,
-    "mobileRightColumn": 29,
-    "parentColumnSpace": 11.84375,
-    "dynamicTriggerPathList": [],
-    "labelPosition": "Top",
-    "sourceData": "{{get_question_complexity.data}}",
-    "key": "hf2kj842sx",
-    "labelTextSize": "0.875rem",
-    "isDeprecated": false,
-    "rightColumn": 63,
-    "widgetId": "nt2fhjg7c3",
-    "optionValue": "uuid",
-    "minWidth": 450,
-    "parentId": "ye68i9bfai",
-    "labelAlignment": "left",
-    "renderMode": "CANVAS",
-    "mobileTopRow": 9,
-    "optionLabel": "description",
-    "responsiveBehavior": "fill",
-    "originalTopRow": 9,
-    "mobileLeftColumn": 9,
-    "maxDynamicHeight": 9000,
-    "minDynamicHeight": 4
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 13,
+  "bottomRowBeforeCollapse": 13,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( get_complexity_by_question.data.map((complexity) => {\n  return {\n    label: complexity.description,\n    value: complexity.uuid\n    };\n  }).pop()))(select_question_complexity.options, select_question_complexity.serverSideFiltering) }}",
+  "displayName": "Select",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "isRequired"
+    },
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "optionValue"
+    },
+    {
+      "key": "isRequired"
+    },
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "hideCard": false,
+  "iconSVG": "https://appcdn.appsmith.com/static/media/icon.a7b19dc8b31d68fcff57f1d2c0084a18.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": "{{select_type.selectedOptionValue==\"QUESTION\"}}",
+  "isVisible": "{{select_type.selectedOptionValue==\"QUESTION\"}}",
+  "key": "hf2kj842sx",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 41,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 16,
+  "mobileLeftColumn": 9,
+  "mobileRightColumn": 29,
+  "mobileTopRow": 9,
+  "optionLabel": "description",
+  "optionValue": "uuid",
+  "originalBottomRow": 13,
+  "originalTopRow": 9,
+  "parentColumnSpace": 11.84375,
+  "parentId": "ye68i9bfai",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "searchTags": [
+    "dropdown"
+  ],
+  "serverSideFiltering": false,
+  "sourceData": "{{get_question_complexity.data}}",
+  "tags": [
+    "Suggested",
+    "Select"
+  ],
+  "topRow": 9,
+  "topRowBeforeCollapse": 9,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "nt2fhjg7c3",
+  "widgetName": "select_question_complexity"
 }

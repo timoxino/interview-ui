@@ -1,51 +1,63 @@
 {
-    "resetFormOnClick": false,
-    "boxShadow": "none",
-    "mobileBottomRow": 22,
-    "widgetName": "Button3",
-    "onClick": "{{\n(function(){\tif(select_type.selectedOptionValue===\"QUESTION\"){\n\t\tupdate_question.run({\n\t\t\t\t\"id\": table_all_nodes.selectedRow.uuid,\n\t\t\t\"name\": input_edit_name.text,\n\t\t\t\"description\": input_edit_description.text,\n\t\t\t\"type\": select_type.selectedOptionValue,\n\t\t\t\"categoryUuid\": select_question_category.selectedOptionValue,\n\t\t\t\"complexityUuid\": select_question_complexity.selectedOptionValue\n\t\t\t}).then(() => {\n\t\tcloseModal('modal_edit');\n\t\t}).catch(() => {\n\t\t\tshowAlert('Update failed', 'error');\n\t\t});\n\t} else {\n\t\tupdate_node.run({\n\t\t\t\"id\": table_all_nodes.selectedRow.uuid,\n\t\t\t\"name\": input_edit_name.text,\n\t\t\t\"description\": input_edit_description.text,\n\t\t\t\"type\": select_type.selectedOptionValue\n\t\t}).then(() => {\n\t\t\tcloseModal('modal_edit');\n\t\t}).catch(() => {\n\t\t\tshowAlert('Update failed', 'error');\n\t\t\t// \"key\": \"value\",\n\t\t});\n\t}\n}\n)()\n}}",
-    "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "dynamicPropertyPathList": [{"key": "onClick"}],
-    "displayName": "Button",
-    "iconSVG": "https://appcdn.appsmith.com/static/media/icon.7beb9123fb53027d9d6b778cdfe4caed.svg",
-    "searchTags": [
-        "click",
-        "submit"
-    ],
-    "topRow": 46,
-    "bottomRow": 50,
-    "type": "BUTTON_WIDGET",
-    "hideCard": false,
-    "mobileRightColumn": 63,
-    "animateLoading": true,
-    "dynamicTriggerPathList": [{"key": "onClick"}],
-    "leftColumn": 56,
-    "dynamicBindingPathList": [
-        {"key": "buttonColor"},
-        {"key": "borderRadius"}
-    ],
-    "text": "Update",
-    "isDisabled": false,
-    "key": "eupzqanlzu",
-    "isDeprecated": false,
-    "rightColumn": 63,
-    "isDefaultClickDisabled": true,
-    "widgetId": "konthq4p3q",
-    "buttonStyle": "PRIMARY_BUTTON",
-    "minWidth": 120,
-    "isVisible": true,
-    "recaptchaType": "V3",
-    "version": 1,
-    "parentId": "ye68i9bfai",
-    "renderMode": "CANVAS",
-    "isLoading": false,
-    "mobileTopRow": 18,
-    "responsiveBehavior": "hug",
-    "originalTopRow": 46,
-    "disabledWhenInvalid": false,
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "mobileLeftColumn": 47,
-    "originalBottomRow": 50,
-    "buttonVariant": "PRIMARY",
-    "placement": "CENTER"
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 50,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "displayName": "Button",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "https://appcdn.appsmith.com/static/media/icon.7beb9123fb53027d9d6b778cdfe4caed.svg",
+  "isDefaultClickDisabled": true,
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "eupzqanlzu",
+  "leftColumn": 56,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "onClick": "{{\n(function(){\tif(select_type.selectedOptionValue===\"QUESTION\"){\n\t\tupdate_question.run({\n\t\t\t\t\"id\": table_all_nodes.selectedRow.uuid,\n\t\t\t\"name\": input_edit_name.text,\n\t\t\t\"description\": input_edit_description.text,\n\t\t\t\"type\": select_type.selectedOptionValue,\n\t\t\t\"categoryUuid\": select_question_category.selectedOptionValue,\n\t\t\t\"complexityUuid\": select_question_complexity.selectedOptionValue\n\t\t\t}).then(() => {\n\t\tcloseModal('modal_edit');\n\t\t}).catch(() => {\n\t\t\tshowAlert('Update failed', 'error');\n\t\t});\n\t} else {\n\t\tupdate_node.run({\n\t\t\t\"id\": table_all_nodes.selectedRow.uuid,\n\t\t\t\"name\": input_edit_name.text,\n\t\t\t\"description\": input_edit_description.text,\n\t\t\t\"type\": select_type.selectedOptionValue\n\t\t}).then(() => {\n\t\t\tcloseModal('modal_edit');\n\t\t}).catch(() => {\n\t\t\tshowAlert('Update failed', 'error');\n\t\t\t// \"key\": \"value\",\n\t\t});\n\t}\n}\n)()\n}}",
+  "originalBottomRow": 50,
+  "originalTopRow": 46,
+  "parentId": "ye68i9bfai",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "text": "Update",
+  "topRow": 46,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "konthq4p3q",
+  "widgetName": "Button3"
 }
